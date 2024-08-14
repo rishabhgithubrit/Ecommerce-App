@@ -14,10 +14,11 @@ const connectDB = async() =>{
   // .catch((e) => {
   //     console.log("---------------failed", e);
   //   });
+  // .connect("mongodb://localhost:27017/Ecommerce", { useNewUrlParser: true })
   await mongoose
-  .connect("mongodb://localhost:27017/Ecommerce", { useNewUrlParser: true })
+  .connect(process.env.MONGO_URI, { useNewUrlParser: true })
   .then(async () => {
-    console.log("connected to the database");})
+    console.log("connected to the database atlas");})
   .catch((e) => {
       console.log("---------------failed", e);
     });
