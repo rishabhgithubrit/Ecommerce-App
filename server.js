@@ -17,6 +17,13 @@ app.use('/api/v1/auth',authRoutes)
 app.use('/api/v1/category',categoryRoute)
 app.use('/api/v1/products',productRoute)
 
+app.get('/testing', (req,res)=>{
+    res.json({
+        success: true,
+        msg: "server is working"
+    })
+})
+
 
 
 app.get('/',(req,res)=> {
