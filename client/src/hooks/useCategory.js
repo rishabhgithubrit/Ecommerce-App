@@ -4,6 +4,10 @@ import axios from "axios";
 export default function useCategory() {
   const [categories, setCategories] = useState([]);
 
+  useEffect(()=>{
+    console.log("now categories are ", categories);
+  },[categories])
+
   //get cat
   const getCategories = async () => {
     try {
